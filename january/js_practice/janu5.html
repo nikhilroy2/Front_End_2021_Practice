@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100%;
+            height: 50vh;
+            border: solid red 5px;
+        }
+    </style>
+</head>
+<body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eligendi nobis blanditiis laboriosam iusto voluptatem corrupti veritatis facere culpa consectetur ut quia incidunt voluptates dolor soluta, ratione ad obcaecati a! Modi quas, eum maiores ipsum est quis ex quidem ab ratione, incidunt similique earum velit repudiandae iure voluptate nam magni excepturi sapiente debitis soluta. Recusandae voluptates possimus voluptatem ipsam? Quos omnis odit laboriosam magnam sunt? Eum, impedit facere delectus in temporibus ducimus ullam, consectetur quo asperiores vitae corrupti, nihil repellat quos. Dolores fugit maiores magnam cumque error, atque aperiam, provident pariatur cum soluta officia similique rem, unde quis laboriosam inventore? Qui quas vel molestiae corporis, omnis ad ipsa. Fugiat voluptates cupiditate nostrum molestias est eius dolorum architecto consectetur similique laudantium cumque exercitationem ex, illo delectus accusantium deleniti. Obcaecati delectus soluta, quia pariatur ipsam ad iusto sed neque rem culpa itaque possimus. Reiciendis libero odio magni eaque cum hic excepturi soluta consequuntur doloribus voluptates ullam, exercitationem laborum, explicabo ipsum velit laudantium illo quam natus. Labore debitis accusamus odio obcaecati alias reprehenderit voluptates, dolorem voluptate facere vel, voluptatem, id soluta illum inventore enim natus! Laboriosam pariatur ad enim excepturi rerum vero, dolorum nisi, officiis iste reiciendis quae quaerat dicta ratione veritatis? Unde?
+
+    <div class="box" contenteditable="true" draggable="true">
+
+    </div>
+    <script>
+        let box = document.querySelector('.box')
+        let html = document.querySelector('html');
+      
+        box.ondrop = event=> {
+           setTimeout(()=> console.log(event.target.innerHTML),1)
+           //setTimeout(()=> console.log(event.target.innerHTML),1000)
+        }
+        
+    </script>
+</body>
+</html>
