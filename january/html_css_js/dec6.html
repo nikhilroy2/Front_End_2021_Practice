@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            padding: 2rem;
+            list-style: none;
+        }
+        ul li{
+            padding: 1rem;
+        }
+        ul li.active{
+            background: #007ACC;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam quaerat aperiam nihil cumque officiis.'</li>
+        <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam quaerat aperiam nihil cumque officiis.'</li>
+        <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam quaerat aperiam nihil cumque officiis.'</li>
+        <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam quaerat aperiam nihil cumque officiis.'</li>
+        <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam quaerat aperiam nihil cumque officiis.'</li>
+    </ul>
+    <script>
+        let li = document.querySelectorAll('li');
+        let li2 = [...li];
+        li.forEach(v=> {
+            v.onclick = e=> {
+                li2.forEach(j=> j.classList.remove('active'))
+                v.classList.add('active')
+            }
+        })
+    </script>
+</body>
+</html>
