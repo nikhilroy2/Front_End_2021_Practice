@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </li>
+        <li>
+            <p>Molestias sunt laborum nam magni.</p>
+        </li>
+        <li>
+            <p>Quod minima distinctio ut qui.</p>
+        </li>
+        <li>
+            <p>Eius praesentium nemo optio molestiae?</p>
+        </li>
+        <li>
+            <p>Dolore optio id fuga eaque!</p>
+        </li>
+        <li>
+            <p>Rerum hic dolore commodi minima.</p>
+        </li>
+        <li>
+            <p>Ullam rerum aperiam error at?</p>
+        </li>
+        <li>
+            <p>Sed fugit repellendus soluta ipsam?</p>
+        </li>
+        <li>
+            <p>Tenetur, ratione autem. Ab, in!</p>
+        </li>
+        <li>
+            <p>Placeat porro consequatur dolorem pariatur!</p>
+        </li>
+    </ul>
+
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        d3.selectAll('p')
+        .data([25,5,10,30,35,6,11,18,50,32])
+        .style('font-size', d=> d + 'px')
+    </script>
+</body>
+
+</html>
