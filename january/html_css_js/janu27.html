@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="notifyMe()">Notify me!</button>
+
+  <script>
+   if(!("Notification") in window){
+     alert("Your browser not support window Notification")
+   } else if (Notification.permission === 'granted'){
+     new Notification("Your time is ready", onclick = ((event)=> {
+       event.preventDefault()
+       console.log("you have clicked the notification")
+       var image = Notification.image;
+       console.log(image)
+     }))
+    
+   } else if (Notification.permission !== 'denied'){
+     Notification.requestPermission().then(p=> {
+       if(p === 'granted'){
+         new Notification("You are Welcome")
+       }
+     })
+   }
+  
+  </script>
+</body>
+</html>

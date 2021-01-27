@@ -6,6 +6,28 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>
+        Direction aware hover pure CSS
+    </h1>
+    <div class="box">
+        <div class="box__right"> Right > Left</div>
+        <div class="box__left"> Left + Right</div>
+        <div class="box__top">Top > Bottom</div>
+        <div class="box__bottom">Bottom > Top</div>
+        <div class="box__center">
+            Hover from any side
+        </div>
+    </div>
     
+    <script>
+        var getDirection = function(ev, obj){
+            var w = obj.offsetWidth,
+                h = obj.offsetHeight,
+                x = (ev.pageX - obj.offsetLeft (w/2) * (w > h ? (h/w): 1)),
+                y = (ev.pageY - obj.offsetTop - (h/2) * (h > w ? (w/h): 1)),
+                d = Math.round(Math.atan2(y,x) / 1.57079633 + 5) % 4;
+                return d;
+        }
+    </script>
 </body>
 </html>
