@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas{
+            position: absolute;
+        }
+       
+    </style>
 </head>
 <body>
+    <video id="video" width="1200" height="800" muted autoplay></video>
 
-<canvas id="myCanvas">
-
-    <script src="https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/dist/face-api.min.js"></script>
-    <script>
-        // import nodejs bindings to native tensorflow,
-// not required, but will speed up things drastically (python required)
-import '@tensorflow/tfjs-node';
-
-// implements nodejs wrappers for HTMLCanvasElement, HTMLImageElement, ImageData
-import * as canvas from 'canvas';
-
-import * as faceapi from 'face-api.js';
-
-// patch nodejs environment, we need to provide an implementation of
-// HTMLCanvasElement and HTMLImageElement, additionally an implementation
-// of ImageData is required, in case you want to use the MTCNN
-const { Canvas, Image, ImageData } = canvas
-faceapi.env.monkeyPatch({ Canvas, Image, ImageData })
-    </script>
+    <script src="./face-api.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
