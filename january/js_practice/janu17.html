@@ -22,6 +22,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
+                <input type="text" class="form-control" onkeydown="keyFun(this)">
+            </div>
+            <div class="col-12">
                 <button class="btn btn-primary">
                     I am button primary
                 </button>
@@ -92,6 +95,205 @@
         crossorigin="anonymous"></script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"></script>
+    <script>
+        function keyFun(val){
+            console.log((event.key).toString().toUppercase)
+            event.preventDefault()
+            switch(event.key){
+                case 'a' || 'a'.toUpperCase():
+                    if(event.shiftKey && event.key === 'a'){
+                        val.value +='ৃ'
+                    } else {
+                        val.value +='ৃ'
+                    }
+                break;
+                case 'b' || 'b'.toUpperCase():
+                    if(event.shiftKey && event.key === 'b'){
+                        val.value += 'ণ'
+                    } else {
+                        val.value +='ন'
+                    }
+                break;
+                case 'c' || 'c'.toUpperCase():
+                    if(event.shiftKey && event.key === 'c'){
+                        val.value += 'ৈ'
+                    } else {
+                        val.value += 'ে'
+                    }
+                break;
+                case 'd' || 'd'.toUpperCase():
+                    if(event.shiftKey && event.key === 'd'){
+                        val.value += 'ী'
+                    } else {
+                        val.value += 'ি'
+                    }
+                break;
+                case 'e' || 'e'.toUpperCase():
+                    if(event.shiftKey && event.key ==='e'){
+                        val.value += 'ঢ'
+                    } else {
+                        val.value += 'ড'
+                    }
+                break;
+                case 'f' || 'f'.toUpperCase():
+                    if(event.shiftKey && event.key === 'f'){
+                        val.value += 'অ'
+                    } else {
+                        val.value += 'া'
+                    }
+                break;
+                case 'g' || 'g'.toUpperCase():
+                    if(event.shiftKey && event.key === 'g') {
+                        val.value += '।'
+                    } else {
+                        val.value += '্'
+                    }
+                break;
+                case 'h' || 'h'.toUpperCase():
+                    if(event.shiftKey && event.key === 'h'){
+                        val.value += 'ভ'
+                    } else {
+                        val.value += 'ব'
+                    }
+                break;
+                case 'i' || 'i'.toUpperCase():
+                    if(event.shiftKey && event.key === 'i') {
+                        val.value += 'ঞ'
+                    } else {
+                        val.value += 'হ'
+                    }
+                break;
+                case 'j' || 'j'.toUpperCase():
+                    if(event.shiftKey && event.key === 'j'){
+                        val.value += 'খ'
+                    } else {
+                        val.value += 'ক'
+                    }
+                break;
+                case 'k' || 'k'.toUpperCase():
+                    if(event.shiftKey && event.key === 'k'){
+                        val.value += 'থ'
+                    } else {
+                        val.value += 'ত'
+                    }
+                break;
+                case 'l' || 'l'.toUpperCase():
+                    if(event.shiftKey && event.key === 'l'){
+                        val.value += 'ধ'
+                    } else {
+                        val.value += 'দ'
+                    }
+                break;
+                case 'm' || 'm'.toUpperCase():
+                    if(event.shiftKey && event.key === 'm'){
+                        val.value += 'শ'
+                    } else {
+                        val.value += 'ম'
+                    }
+                break;
+                case 'n' || 'n'.toUpperCase():
+                    if(event.shiftKey && event.key === 'n'){
+                        val.value += 'ষ'
+                    } else {
+                        val.value += 'স'
+                    }
+                break;
+                case 'o' || 'o'.toUpperCase():
+                    if(event.shiftKey && event.key === 'o'){
+                        val.value += 'ঘ'
+                    } else {
+                        val.value += 'গ'
+                    }
+                break;
+                case 'p' || 'p'.toUpperCase():
+                    if(event.shiftKey && event.key === 'p'){
+                        val.value += 'ঢ়'
+                    } else {
+                        val.value += 'ড়'
+                    }
+                break;
+                case 'q' || 'q'.toUpperCase():
+                    if(event.shiftKey && event.key === 'q'){
+                        val.value += 'ং'   
+                    } else {
+                        val.value += 'ঙ'
+                    }
+                break;
+                case 'r' || 'r'.toUpperCase():
+                    if(event.shiftKey && event.key === 'r'){
+                        val.value += 'ফ'
+                    } else {
+                        val.value += 'প'
+                    }
+                break;
+                case 's' || 's'.toUpperCase():
+                    if(event.shiftKey && event.key === 's'){
+                        val.value += '‍ূ'
+                    } else {
+                        val.value += 'ু'
+                    }
+                break;
+                case 't' || 't'.toUpperCase():
+                    if(event.shiftKey && event.key === 't' ){
+                        val.value += '‍ঠ'
+                    } else {
+                        val.value += 'ট'
+                    }
+                break;
+                case 'u' || 'u'.toUpperCase():
+                    if(event.shiftKey && event.key === 'u') {
+                        val.value += 'ঝ'
+                    } else {
+                        val.value += 'জ'
+                    }
+                break;
+                case 'v' || 'v'.toUpperCase():
+                    if(event.shiftKey && event.key === 'v'){
+                        val.value += 'ল'
+                    }
+                    val.value += 'র'
+                break;
+                case 'w' || 'w'.toUpperCase():
+                    if(event.shiftKey && event.key === 'w'){
+                        val.value += 'য়'
+                    } else {
+                        val.value += 'য'
+                    }
+                break;
+                case 'x' || 'x'.toUpperCase():
+                    if(event.shiftKey && event.key === 'x'){
+                        val.value += 'ৗ'
+                    } else {
+                        val.value += 'ও'
+                    }
+                break;
+                case 'y' || 'y'.toUpperCase():
+                    if(event.shiftKey && event.key === 'y') {
+                        val.value += 'ছ'
+                    } else {
+                        val.value += 'চ'
+                    }
+                break;
+                case 'z' || 'z'.toUpperCase():
+                    if(event.shiftKey && event.key === 'z'){
+                        val.value += '্য'
+                    } else {
+                        val.value += '্র'
+                    }
+                break;
+                // Control Keyboard
+                case 'Ba || 'Ba.toUpperCase()ckspace':
+                    val.value =val.value.slice(0,-1)
+                    break;
+                case ' ' || ' '.toUpperCase() || 'Spacebar':
+                    val.value += ' '
+                // Sortcut ctrlKey, altKey
+                default:
+                    console.log("not matched keyboard")
+                
+            }
+        }
+    </script>
 </body>
 
 </html>
