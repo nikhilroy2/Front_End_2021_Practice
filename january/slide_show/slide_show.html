@@ -48,9 +48,11 @@
             opacity: .5;
             cursor: pointer;
         }
-        .slider_show img:hover{
+        .slider_show img:hover,
+        .slider_show img.active{
             opacity: 1;
         }
+       
         button.left_angle{
             top: 50%;
             left: 0;
@@ -74,7 +76,7 @@
             <button class="btn btn-primary position-absolute left_angle">
                 <i class="fas fa-angle-left    "></i>
             </button>
-            <button class="btn btn-primary position-absolute right_angle">
+            <button onclick="rightAngle(this)" class="btn btn-primary position-absolute right_angle">
                 <i class="fas fa-angle-right    "></i>
             </button>
             <div class="img_wrapper active ripple" data-mdb-ripple-color="light" >
@@ -85,7 +87,7 @@
             </div>
         </div>
         <div class="slider_show d-flex">
-            <img onclick="slideShow(this,'I am image1', 1)"  src="https://cdn.pixabay.com/photo/2020/01/04/18/40/trees-4741364__340.png" alt="">
+            <img class="active" onclick="slideShow(this,'I am image1', 1)"  src="https://cdn.pixabay.com/photo/2020/01/04/18/40/trees-4741364__340.png" alt="">
             <img onclick="slideShow(this,'I am image2', 2)"  src="https://cdn.pixabay.com/photo/2019/08/26/10/10/dockland-4431309__340.jpg" alt="">
             <img onclick="slideShow(this,'I am image3', 3)"  src="https://cdn.pixabay.com/photo/2020/12/19/23/13/girls-5845644__340.jpg" alt="">
             <img onclick="slideShow(this,'I am image4', 4)"  src="https://cdn.pixabay.com/photo/2020/07/18/10/52/plant-5416835__340.jpg" alt="">
@@ -109,7 +111,10 @@
             img_wrapper.querySelector('img').src = val.getAttribute('src');
             img_wrapper.querySelector('h2').innerHTML = text;
             counter.innerHTML = `${index + 1}/${slide_img.length}`;
+            
+            slide_img.forEach((v)=> v.classList.contains('active') ? v.classList.remove('active') : val.classList.add('active') )
         }
+     
 
     </script>
 </body>
