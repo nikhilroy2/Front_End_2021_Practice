@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/css/mdb.min.css' integrity='sha512-vbHq6SaqHW/OPyfei/7ur+YG+Qa0FbcAhv8aftHV1f/97a8PsHAtQL8Ero9OcjmQ+obsWSESqi1kx1Hi/oi+Hg==' crossorigin='anonymous'/>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </li>
+        <li>
+            <p>Assumenda, sapiente! Distinctio, dolorem quidem?</p>
+        </li>
+        <li>
+            <p>Illum commodi error qui aliquam!</p>
+        </li>
+        <li>
+            <p>Voluptate porro eum reprehenderit! Eligendi.</p>
+        </li>
+        <li>
+            <p>Quos adipisci hic accusantium ut!</p>
+        </li>
+    </ul>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li class="third-item">list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+      </ul>
+
+      <button class="btn btn-primary">
+          Toggle paragraph
+      </button>
+      <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet explicabo dolores beatae, quasi laborum adipisci excepturi cum a ipsa hic quia ipsum illum? Sit quas quibusdam a ratione dignissimos, quos qui. Exercitationem repellat amet deserunt, ab dignissimos voluptatum aliquid placeat molestiae, dolores natus voluptas iure distinctio aperiam tempora possimus adipisci nam veritatis, sed accusantium culpa eum dolorum sint. Quia consectetur soluta sed. Distinctio optio culpa libero minima at magni fugit amet nobis. Asperiores explicabo sint distinctio repellendus harum in nesciunt soluta nulla? Provident, suscipit totam et qui perspiciatis culpa ea harum praesentium accusantium quisquam sed repellendus. Ducimus tempora odit ea eius maxime ab accusamus debitis in totam delectus vero dicta porro quisquam aliquam, atque saepe illo praesentium dolores odio non asperiores. Accusamus eum ut possimus aliquid blanditiis? Deserunt consectetur ipsam similique, necessitatibus hic, quae assumenda modi deleniti error cum quisquam nisi atque adipisci aliquam debitis dolorem. Dolorum consectetur fugit cum repudiandae sed rem incidunt sint voluptate quasi nisi, dolore est consequatur ullam consequuntur cumque sequi laborum? Modi quas sapiente minima animi eum sunt repellendus quaerat iusto commodi maxime magnam tempora molestiae, quam corporis sed incidunt blanditiis expedita voluptates? Accusamus odio voluptate temporibus eveniet rem libero asperiores dolorum ratione vitae facere ut quas soluta delectus, nostrum autem alias unde perspiciatis nesciunt iste sequi labore voluptatibus. Totam maxime aliquid animi a reiciendis hic, molestias, quae fugiat ut nisi consequuntur. Dicta, aspernatur! Repellendus sapiente at reiciendis corrupti, eos esse iste amet neque delectus illo, nam unde deserunt recusandae! Ea culpa ipsam unde dicta!</p>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity='sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin='anonymous'></script>
+    <script>
+        $("ul").add('li').css({
+            border: "solid red",
+            color: "red"
+        })
+        $( "li.third-item" ).nextAll().addBack()
+  .css( "background-color", "blue" );
+  $('.btn').click(()=>
+        $('.para').slideToggle('slow')
+  )
+    </script>
+</body>
+</html>
