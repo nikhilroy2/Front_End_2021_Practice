@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis beatae
+      vitae accusantium, temporibus commodi quisquam maiores labore similique,
+    </p>
+
+    <script>
+      //   let p = document.querySelector("p");
+      //   let trunk = p.innerText.substring(0, p.innerText.length);
+      //   console.log(trunk);
+
+      function truncate(p, n) {
+        if (p.innerHTML.length - 1 >= n) {
+          let trunk = p.innerText.substring(0, p.innerText.length - (n + 1));
+          p.innerText = trunk + "...";
+          console.log("true");
+        } else {
+          p.innerText = p.innerText;
+          console.log("false");
+        }
+      }
+      truncate(document.querySelector("p"), 200);
+    </script>
+  </body>
+</html>
