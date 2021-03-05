@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit=" formSubmit(this)">
+        <p></p>
+        <input type="text" name="email" id="" placeholder="Enter Email">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function formSubmit(val){
+            // \b[A-Z0-9a-z._%+-]+@co\.com\.net\b
+            event.preventDefault()
+            let emailPattern = /\b[A-Z0-9a-z._%+-]+@[A-Z0-9a-z._%+-]+(.com|.co.uk|.co.nz|.com.au)$/
+            let email = val.email;
+           // console.log(!emailPattern.test(email.value))
+            let p = document.querySelector('p')
+            if(emailPattern.test(email.value)){
+                p.innerHTML = 'This email allow'
+            } else {
+                p.innerHTML = 'This email not allow'
+            }
+           
+        }
+    </script>
+</body>
+</html>
