@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h2 class="text-center">Navbar Learning</h2>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-sm">
+                <a href="#" class="navbar-brand">Navbar1</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="collapse1">
+                    <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+                        <li class="nav-item"><a href="#" class="nav-link active">Lorem.</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Deserunt!</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Reiciendis.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <div class="container-md">
+                <a href="#" class="navbar-brand">Navbar2</a>
+                <form action="" class="d-flex">
+                    <input type="search" class="form-control me-2" placeholder="Search here...">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class=" dropdown">
+                    <a href="#" class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown">
+                        Dropdown 3
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li class="dropdown-item"><a href="#" class="nav-link text-dark">Lorem.</a></li>
+                        <li class="dropdown-item"><a href="#" class="nav-link text-dark">Officia?</a></li>
+                        <li class="dropdown-item"><a href="#" class="nav-link text-dark">Laudantium!</a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" data-bs-target="#collapse2" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="collapse2">
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                        <li class="nav-item"><a href="#" class="nav-link active">Lorem.</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Aspernatur.</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Magnam.</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">
+                                Dropdown1
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="#" class="badge text-dark">Lorem.</a></li>
+                                <li class="dropdown-item"><a href="#" class="badge text-dark">Accusantium?</a></li>
+                                <li class="dropdown-item"><a href="#" class="badge text-dark">Delectus.</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h2 class="text-center">Hello Dropdown</h2>
+    <div class="dropdown">
+        <a href="#" data-bs-toggle="dropdown" class="dropdown-toggle nav-link">
+            Dropdown4
+        </a>
+        <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="#" onclick="event.stopPropagation()" class="nav-link text-dark">Lorem, ipsum.</a></li>
+            <li class="dropdown-item"><a href="#" class="nav-link text-dark">Quam, reprehenderit.</a></li>
+            <li class="dropdown-item"><a href="#" class="nav-link text-dark">Dolorem, perspiciatis.</a></li>
+            <li class="dropdown-item"><a href="#" class="nav-link text-dark">Hic, mollitia.</a></li>
+            <li class="dropdown-item"><a href="#" class="nav-link text-dark">Harum, tempore.</a></li>
+        </ul>
+    </div>
+
+    <h2 class="text-center">Hello Search form</h2>
+    <form action="" class="d-flex justify-content-center">
+        <div class="col-8 d-flex col-sm-6 col-md-6 col-lg-4">
+            <input type="search" class="form-control me-2" placeholder="Search here...">
+        <button class="btn btn-outline-success" type="button">
+            Search
+        </button>
+        </div>
+    </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
