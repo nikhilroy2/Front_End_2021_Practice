@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="calender__wrapper">
+        <div class="calender__title">
+            <h2>Calender</h2>
+        </div>
+        <div class="calender__control">
+            <button onclick="PrevMonth()"><i class="fas fa-angle-left    "></i></button>
+            <div class="calender__current__date">April 2021</div>
+            <button onclick="NextMonth()"><i class="fas fa-angle-right    "></i></button>
+        </div>
+        <div class="calender__week">
+            <span>Sun</span>
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+        </div>
+
+        <div class="calender__dates"></div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

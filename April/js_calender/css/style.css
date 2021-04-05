@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.calender__title {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background: #FF69B4;
+}
+
+.calender__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 6vw;
+}
+
+.calender__control .calender__current__date {
+  font-size: 25px;
+}
+
+.calender__control button {
+  background: #FF69B4;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 21px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.calender__week {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.calender__week > span {
+  -ms-flex-preferred-size: 14.28%;
+      flex-basis: 14.28%;
+  display: block;
+  text-align: center;
+}
+
+.calender__dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.calender__dates span.date {
+  -ms-flex-preferred-size: 14.28%;
+      flex-basis: 14.28%;
+  font-size: 20px;
+  text-align: center;
+  color: #212121;
+}
+
+.calender__dates span.date b {
+  display: block;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: auto;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+  .calender__dates span.date b {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.calender__dates span.date b.active__date {
+  background: #ff69b4;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
