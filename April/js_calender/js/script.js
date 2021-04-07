@@ -6,7 +6,7 @@ let currentTime = new Date()
 let monthCounter = currentTime.getMonth();
 let yearCounter = currentTime.getFullYear()
 let weekCounter = 0;
-console.log(weekCounter)
+//console.log(weekCounter)
 //console.log(new Date(2021,currentTime.getMonth() -1,0))
 //console.log((new Date(currentTime.getFullYear(), currentTime.getMonth() + 1, 0).getDate()))
 //console.log(currentTime.getMonth() ) // start from 0
@@ -71,10 +71,14 @@ function activeDate() {
     let dateActive = $$('.calender__dates .date b')
     // console.log(dateActive)
     dateActive.forEach(v => {
+        (v.innerText === String(currentTime.getDate()))&&(v.classList.add('active__date'))
         v.onclick = () => {
             dateActive.forEach(j => j.classList.remove('active__date'))
             v.classList.add('active__date')
         }
+        
+        // console.log(v.innerText)
+        // console.log(currentTime.getDate())
     })
 }
 activeDate()
