@@ -71,7 +71,10 @@ function activeDate() {
     let dateActive = $$('.calender__dates .date b')
     // console.log(dateActive)
     dateActive.forEach(v => {
-        (v.innerText === String(currentTime.getDate()))&&(v.classList.add('active__date'))
+        currentTime.toLocaleDateString() == new Date(v.innerText + calender__current__date.innerText).toLocaleDateString()&&(
+            v.classList.add('active__date')
+        )
+
         v.onclick = () => {
             dateActive.forEach(j => j.classList.remove('active__date'))
             v.classList.add('active__date')
