@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="btnGet('gita')"> Only Gita </button>
+
+
+    <script>
+        let mediaObj = [
+            {
+                select_category: "gita",
+                title: 'Hare Krishna'
+            },
+            {
+                select_category: "kirton",
+                title: 'Hare kirton'
+            },
+            {
+                select_category: "mohabharot",
+                title: 'Hare mohabharot'
+            },
+            {
+                select_category: "gita",
+                title: 'Hare Krishna'
+            },
+        ]
+        
+        function btnGet(val){
+            let newArr = mediaObj.filter(v=> v.select_category === val)
+            console.log(newArr)
+
+        }
+    </script>
+</body>
+</html>
