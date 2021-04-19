@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div align="center" style="border:0; width:100%; height:100vh; display: block; min-height:100%;">
+        <iframe onload="sleep()" align="center"
+            style="visibility:hidden; border:0; width:100%; height:100vh; min-height:100%;" scrolling="no"
+            id="bsaIframeVideoid10" src="https://advertisemichigan.com/api/?site_id=1&amp;id=9&amp;i=1">
+        </iframe>
+    </div>
+
+    <script>
+        function showbsaIframeVideoid10() {
+            //console.log(new Date().toLocaleTimeString())
+            document.getElementById("bsaIframeVideoid10").style.visibility = "visible";
+        }
+        setTimeout(showbsaIframeVideoid10, 14000);
+
+        function sleep() {
+            //setTimeout("countdown(myStopFunction)", 15000);
+
+            setInterval(
+                function myRefresh() {
+                    console.log("refresh")
+                    document.getElementById("bsaIframeVideoid10").style.visibility = "hidden";
+                    document.getElementById("bsaIframeVideoid10").src = "https://advertisemichigan.com/api/?id=9&i=1";
+                }, 29000);
+            function myStopFunction() {
+                clearInterval(myRefresh);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div align="center" style=" border:0; width:100%; height:100vh; display: block; min-height:100%;">
+		<iframe onload="sleep()" align="center"
+			style="visibility: hidden; border:0; width:100%; height:100vh; min-height:100%;" scrolling="no"
+			id="bsaIframeVideoid10" src="https://advertisemichigan.com/api/?site_id=1&amp;id=9&amp;i=1" data-src="https://advertisemichigan.com/api/?site_id=1&amp;id=9&amp;i=1">
+		</iframe>
+	</div>
+
+
+	<script>
+
+		//  setTimeout("showRedirect()", 1500);
+		//  function sleep() {
+		//  	setTimeout("countdown()", 5000);
+		//  }
+
+		function sleep() {
+			// let get_src = event.target.src;
+			// console.log(get_src)
+			//event.target.setAttribute('src', '')
+			setInterval(
+				function myRefresh() {
+					let bsaIframeVideoid10 = document.getElementById("bsaIframeVideoid10")
+					let visible = window.getComputedStyle(bsaIframeVideoid10).getPropertyValue('visibility')
+					if(visible === 'hidden'){
+						//console.log('hidden')
+						bsaIframeVideoid10.style.visibility = "visible";
+						bsaIframeVideoid10.src = bsaIframeVideoid10.getAttribute('data-src')
+
+					} else {
+						console.log('visible')
+						bsaIframeVideoid10.style.visibility = "hidden";
+						bsaIframeVideoid10.src = ''
+					}
+					
+				}, Number(14 * 1000));
+		}
+
+	</script>
+</body>
+
+</html>
