@@ -25,13 +25,20 @@
                 <span class="text_gradient">My About Details</span>
                 <h2 class="my-2 text-black font-weight-bold">About Me</h2>
                 <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered in
+                    some form, by injected humour, or randomised words which dont look even slightly believable. If you
+                    are going to use a passage of Lorem Ipsum,
                 </p>
                 <div class="btn-group my-3 shadow-0 d-flex justify-content-between btn__toggle__group">
-                    <button onclick="btnNavToggle(this)" data-mdb-ripple-color="light"  class="btn ripple rounded-pill btn-muted shadow-0 btn__toggle__group--active">Main Skills</button>
-                    <button onclick="btnNavToggle(this)" data-mdb-ripple-color="light"  class="btn ripple rounded-pill btn-muted shadow-0">Awards</button>
-                    <button onclick="btnNavToggle(this)" data-mdb-ripple-color="light"  class="btn ripple rounded-pill btn-muted shadow-0">Experience</button>
-                    <button onclick="btnNavToggle(this)" data-mdb-ripple-color="light"  class="btn ripple rounded-pill btn-muted shadow-0">Education</button>
+                    <button onclick="btnNavToggle(this)" data-mdb-ripple-color="light"
+                        class="btn ripple rounded-pill btn-muted shadow-0 btn__toggle__group--active">Main
+                        Skills</button>
+                    <button onclick="btnNavToggle(this)" data-mdb-ripple-color="light"
+                        class="btn ripple rounded-pill btn-muted shadow-0">Awards</button>
+                    <button onclick="btnNavToggle(this)" data-mdb-ripple-color="light"
+                        class="btn ripple rounded-pill btn-muted shadow-0">Experience</button>
+                    <button onclick="btnNavToggle(this)" data-mdb-ripple-color="light"
+                        class="btn ripple rounded-pill btn-muted shadow-0">Education</button>
                 </div>
                 <ul class="skill__wrapper list-unstyled">
                     <li class="d-flex justify-content-between skill__wrapper--list" style="--width: 95%">
@@ -55,13 +62,14 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
     <script>
-        function btnNavToggle(val){
+        function btnNavToggle(val) {
             let child = val.parentElement.children
-            Array.from(child).forEach(v=> {
+            Array.from(child).forEach(v => {
                 v.classList.remove('btn__toggle__group--active')
             })
             val.classList.add('btn__toggle__group--active')
         }
     </script>
 </body>
+
 </html>
