@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+.text_gradient{
+    background: linear-gradient(45deg, #5BB5FE , red , hotpink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn__toggle__group{
+    border: 2px solid rgba(0, 0, 0, 0.064);
+    border-radius: 20px;
+}
+.btn__toggle__group--active{
+    background: red!important;
+    color: white!important;
+}
+
+.skill__wrapper--list{
+    position: relative;
+    padding: 12px 0;
+    &::before{
+        content: '';
+        width: 100%;
+        background: rgba(0, 0, 0, 0.1);
+        height: 3px;
+        border-radius: 20px;
+        bottom: 0;
+        position: absolute;
+    }
+    &::after{
+        content: '';
+        width: var(--width);
+        height: 3px;
+        background: linear-gradient(49deg, #5bb5fe, red);
+        border-radius: 20px;
+        bottom: 0;
+        position: absolute;
+    }
+}
