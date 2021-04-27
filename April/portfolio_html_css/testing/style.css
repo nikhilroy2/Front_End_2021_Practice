@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.portfolio__wrapper {
+  width: 90%;
+  margin: 2rem auto;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+  background: #000;
+  padding: 15px;
+  color: white;
+}
+.portfolio__wrapper h3 {
+  text-align: center;
+}
+
+.portfolio__wrapper--toggle label {
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 8px 12px;
+  color: white;
+}
+.portfolio__wrapper--toggle {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.portfolio__wrapper--toggle button {
+  background: transparent;
+  border: none;
+  color: currentColor;
+  text-decoration: none;
+  pointer-events: none;
+}
+.portfolio__wrapper--toggle label:hover {
+  background: white;
+  color: black;
+}
+
+[type="radio"]#all:checked ~ nav .portfolio__wrapper--toggle [for="all"],
+[type="radio"]#media:checked ~ nav .portfolio__wrapper--toggle [for="media"],
+[type="radio"]#illustration:checked
+  ~ nav
+  .portfolio__wrapper--toggle
+  [for="illustration"],
+[type="radio"]#video:checked ~ nav .portfolio__wrapper--toggle [for="video"] {
+  background: red;
+  color: white;
+}
+
+.portfolio__menu {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.portfolio__menu > div{
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+.portfolio__menu > div .card{
+    background: white;
+    color: black;
+    margin: .2%;
+    height: 300px;
+    width: 24%;
+    animation: .5s ease cardAnimate forwards;
+    display: grid;
+    place-items: center;
+    animation-delay: var(--delay);
+    opacity: 0;
+}
+@keyframes cardAnimate {
+  0%{
+    transform: scale(0.5) translateY(200px);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+
+  }
+}
+
+[type="radio"]#all:checked ~ menu .portfolio__menu .portfolio__menu--all,
+[type="radio"]#media:checked ~ menu .portfolio__menu .portfolio__menu--media,
+[type="radio"]#illustration:checked
+  ~ menu
+  .portfolio__menu
+  .portfolio__menu--illustration,
+[type="radio"]#video:checked ~ menu .portfolio__menu .portfolio__menu--video {
+  display: flex ;
+
+}
+
