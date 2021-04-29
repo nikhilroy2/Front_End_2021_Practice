@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: #000;
+    color: white;
+}
+
+.wrapper{
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: 3px 3px 10px #888;
+    padding: 15px;
+
+}
+.wrapper h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.tab__btn__wrapper{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.tab__btn__wrapper label{
+    padding: 8px 12px;
+    color: white;
+    transition: .5s;
+}
+.tab__btn__wrapper label:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+.tab__btn__wrapper button{
+    background: transparent;
+    color: currentColor;
+    border: none;
+    pointer-events: none;
+}
+
+[type="radio"]{
+    display: none;
+}
+[type="radio"]#all:checked ~ .tab__btn__wrapper [for="all"],
+[type="radio"]#media:checked ~ .tab__btn__wrapper [for="media"],
+[type="radio"]#video:checked ~ .tab__btn__wrapper [for="video"],
+[type="radio"]#illustration:checked ~ .tab__btn__wrapper [for="illustration"]{
+    background: red;
+    color: white;
+}
+
+
+
+
+[type="radio"]#all:checked ~ .portfolio__wrapper .portfolio__wrapper--all,
+[type="radio"]#media:checked ~ .portfolio__wrapper .portfolio__wrapper--media,
+[type="radio"]#video:checked ~ .portfolio__wrapper .portfolio__wrapper--video,
+[type="radio"]#illustration:checked ~ .portfolio__wrapper .portfolio__wrapper--illustration{
+    display: block;
+  
+}
+
+
+
+
+
+.portfolio__wrapper > div{
+    display: none;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+.portfolio__wrapper .card{
+    width: 24%;
+    margin: .5%;
+    padding: 25px;
+    font-size: 3rem;
+    height: 300px;
+    animation: 2s linear animateCard forwards;
+    opacity: 0;
+    animation-delay: var(--delay);
+    float: left;
+    position: relative;
+}
+.portfolio__wrapper .card img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes animateCard{
+    0%{
+        opacity: 0;
+        transform: translate(50px, 50px) scale(.8);
+    }
+    100%{
+        transform: translate(0px, 0px) scale(1);
+        opacity: 1;
+
+    }
+}
+
+
+
+
+
+
+
+.card .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+   .card .box__right, .card .box__left, .card .box__top, .card .box__bottom, .card .box__center {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    line-height: inherit;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease;
+  }
+   .card .box__right:before, .card .box__left:before, .card .box__top:before, .card .box__bottom:before, .card .box__center:before {
+    position: absolute;
+    content: '';
+    /*
+                          * Calculation:
+                          *      ____a____
+                          *    /|\        |
+                          *   b | \       |
+                          *  /  a  \      |
+                          *  \  |  /      |
+                          *   \ | /       |
+                          *    \|/________|
+                          *
+                          *  a^2 = b^2+b^2
+                          *
+                          *  solve to b:
+                          *
+                          *  a^2         = 2b^2 | /2  
+                          *  a^2 / 2     =  b^2 | sqrt
+                          *  a / sqrt(2) =  b
+                          *
+                          * Percentage: 
+                          * a = 100%
+                          * 100 / sqrt(2) = 70.71%
+                          *                 ------
+                          */
+    width: 70.71%;
+    height: 70.71%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+   .card .box__right:hover, .card .box__left:hover, .card .box__top:hover, .card .box__bottom:hover, .card .box__center:hover {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    z-index: 1;
+  }
+   .card .box__right:hover:before, .card .box__left:hover:before, .card .box__top:hover:before, .card .box__bottom:hover:before, .card .box__center:hover:before {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: none;
+            transform: none;
+  }
+   .card .box__right {
+    background: orange;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+   .card .box__right:before {
+    right: 100%;
+    bottom: 0;
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+   .card .box__right:hover ~ .box__center {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+   .card .box__left {
+    background: orange;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+   .card .box__left:before {
+    left: 100%;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+   .card .box__left:hover ~ .box__center {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+   .card .box__top {
+    background: orange;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+   .card .box__top:before {
+    top: 100%;
+    right: 0;
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+  }
+   .card .box__top:hover ~ .box__center {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+   .card .box__bottom {
+    background: orange;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+   .card .box__bottom:before {
+    bottom: 100%;
+    left: 0;
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+  }
+   .card .box__bottom:hover ~ .box__center {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+   .card .box__center {
+    background: transparent;
+    z-index: -1;
+  }
+   .card .box__center img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    cursor: pointer;
+    pointer-events: visible;
+  }
+  /*# sourceMappingURL=scss.css.map */

@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: #000;
+}
+.wrapper{
+    width: 90%;
+    margin: 2rem auto;
+    color: white;
+}
+.wrapper h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.tab{
+    text-align: center;
+}
+.tab label{
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: .5s;
+}
+.tab label:hover{
+    background: white;
+    color: black;
+}
+.tab label button{
+    pointer-events: none;
+    background: transparent;
+    color: currentColor;
+    border: none;
+    font-size: 1.3rem;
+}
+[type="radio"]#all:checked ~ .tab [for="all"],
+[type="radio"]#media:checked ~ .tab [for="media"],
+[type="radio"]#video:checked ~ .tab [for="video"],
+[type="radio"]#illustration:checked ~ .tab [for="illustration"]{
+    background: red;
+    color: white;
+}
+
+.tabe__menu{
+    margin-top: 2rem;
+}
+.tabe__menu > div{
+    display: none;
+}
+
+
+[type="radio"]#all:checked ~ .tabe__menu .tabe__menu--all,
+[type="radio"]#media:checked ~ .tabe__menu .tabe__menu--media,
+[type="radio"]#video:checked ~ .tabe__menu .tabe__menu--video,
+[type="radio"]#illustration:checked ~ .tabe__menu .tabe__menu--illustration{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tabe__menu .card{
+    width: 24%;
+    margin: .5%;
+    height: 300px;
+    background: linear-gradient( 44deg,#23A8E7,#FC4136);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1000px){
+    .tabe__menu .card{
+        width: 32%;
+    }
+}
+@media (max-width: 800px){
+    .tabe__menu .card{
+        width: 49%;
+    }
+}
+@media (max-width:600px){
+    .tabe__menu .card{
+        width: 98%;
+    }
+}
