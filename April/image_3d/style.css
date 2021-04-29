@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.image_3d{
+    perspective: 1000px;
+    width: 960px;
+    height: 640px;
+    box-shadow: 3px 5px 25px 8px rgba(0, 0, 0, 0.2);
+}
+.image_3d span{
+    display: block;
+    height: 160px;
+    transition: 1s;
+    transform: rotateY(0deg);
+}
+.image_3d:hover span{
+    transform: rotateY(360deg);
+
+}
+.image_3d span:nth-child(1){
+    background: url('./child-5582985_960_720.png') 0px 0px/cover no-repeat;
+    transition-delay: 0s;
+}
+.image_3d span:nth-child(2){
+    background: url('./child-5582985_960_720.png') 0px -160px/cover no-repeat;
+    transition-delay: .1s;
+
+}
+.image_3d span:nth-child(3){
+    background: url('./child-5582985_960_720.png') 0px calc(-160px * 2)/cover no-repeat;
+    transition-delay: .2s;
+
+}
+.image_3d span:nth-child(4){
+    background: url('./child-5582985_960_720.png') 0px calc(-160px * 3)/cover no-repeat;
+    transition-delay: .3s;
+
+}
