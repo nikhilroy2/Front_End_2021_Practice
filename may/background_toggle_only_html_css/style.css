@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+label{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 35px;
+    background: #7d68ee;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    cursor: pointer;
+}
+label .fas{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    transition: .5s;
+    color: white;
+}
+label .fa-moon{
+    opacity: 0;
+}
+input:checked ~ label .fas{
+    left: 70%;
+}
+input:checked ~ label .fa-sun{
+    opacity: 0;
+}
+input:checked ~ label .fa-moon{
+    opacity: 1;
+}
+input{
+    display: none;
+}
+main{
+    background: #000;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
+    clip-path: polygon(80% 0, 100% 0, 100% 12%, 100% 20%, 98% 3%, 82% 0, 65% 0);
+
+}
+input:checked ~ main{
+    clip-path: polygon(0 0, 100% 0, 100% 12%, 100% 100%, 0 100%, 0 89%, 0 38%);
+}
