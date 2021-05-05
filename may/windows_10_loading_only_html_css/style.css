@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 500px;
+    height: 100vh;
+}
+.plate_wrapper{
+    width: 200px;
+    height: 180px;
+    transform: rotateY(-33deg);
+}
+.plate_wrapper span{
+    background: #00E7FF;
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+}
+.plate_wrapper span:nth-child(odd){
+    border-right: 4px solid #000;
+}
+svg{
+    position: absolute;
+    bottom: 10%;
+    transform: scale(.7);
+}
