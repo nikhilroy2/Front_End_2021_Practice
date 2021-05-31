@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+
+    <link rel="stylesheet" href="https://aws2.docokame.biz/dvms/unreal_html5_player_styles_v1.css" />
+    <script src="https://aws2.docokame.biz/dvms/unreal_html5_player_script_v2.js" type="text/javascript"></script>
+
+
+</head>
+
+<body onresize="resizePlayer()">
+
+    <DocokameHTML5VideoPlayer id="DocokamePlayer1" src="./video.mp4"></docokameHTML5VideoPlayer>
+
+    <script type="text/javascript">
+
+        var bigbuttons = false;
+
+        if ("MediaSource" in window && "WebSocket" in window)
+            RunPlayer("DocokamePlayer1", window.outerWidth - 150, window.outerHeight - 150, "aws2.docokame.biz", 444, true, "uVMS_b69388983a200d81a5e2", "", true, true, 1, "", bigbuttons);
+
+
+
+
+
+       
+        
+        
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+
+
+unreal_html5_player_script_v2.js
+
+        Feb 28 2017: new version, introducing ability to play with server-side timeshift.
+        Apr 03 2017: fixes for better startup of the player.
+        Apr 18 2017: fixes for better slider (seek bar) click handling in Firefox and mobile browsers; fixes for timeshifted playback.
+        Jun 15 2017: bug fix for server-side timeshift that lasts more than 18 hours.
+		Dec 14 2018: multiple improvements; fix for Chrome pausing playback when switching to another tab.

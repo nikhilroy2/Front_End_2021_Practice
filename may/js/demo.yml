@@ -1,0 +1,10 @@
+# Demo of yml
+
+name: "mike"
+occupation: 'programmer'
+age: 23
+hobies:
+  - hiking
+  - movies
+  - riding bike
+  
