@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="quiz_section">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12">
+                    <div class="col_wrapper">
+                        <strong>Indicating your answer</strong>
+                        <p>
+                            This test uses multiple choice questions.
+                            To answer each multiple-choice question in your exam click your answer with mouse.
+                        </p>
+                        <div class="practice_wrapper">
+                            <span>
+                                Practice:
+                            </span>
+                            <ol>
+                                <li>Select an answer now. Notice that the open circle next to the answer you chose is
+                                    now filled in.</li>
+                                <li>
+                                    Change your answer by selecting different choices.
+                                </li>
+                                <li>
+                                    Click next to go on
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col d-none d-md-block"></div>
+                <div class="col">
+                    <div class="col_wrapper text-start text-md-center">
+                        Question <span class="question_index_number"></span>/<span class="question_length_number"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col_wrapper text-end" data-timer="">
+                        Time remaining: 00:00
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="quiz">
+                        <h1 id="quiz-name" style="opacity: 0; height: 0px" class="text-black"></h1>
+                        <button id="submit-button" class="btn btn-primary">Submit Answers</button>
+                        <button id="next-question-button" class="btn btn-primary">Next Question</button>
+                        <button id="prev-question-button" class="btn btn-primary">Previous</button>
+
+                        <div id="quiz-results" class="p-4">
+                            <p id="quiz-results-message"></p>
+                            <p id="quiz-results-score"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

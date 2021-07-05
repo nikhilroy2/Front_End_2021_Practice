@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="demo" onclick="sendEmail()">
+        Send Email
+    </button>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_4keBzvmpo7uRjL0Jqgz8c");
+            console.log(emailjs)
+
+            var templateParams = {
+                name: 'James',
+                notes: 'Check this out!',
+                reply_email: 'duhahree2c@gmail.com',
+                message: 'Message from dev Hello World Lorem ipsum'
+            };
+            emailjs.send('service_12huwkv', 'template_s2sq27t', templateParams)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text, response);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
+        })();
+    </script>
+</body>
+</html>
